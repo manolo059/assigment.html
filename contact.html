@@ -8,17 +8,21 @@
         <a href="index.html">Home</a>
         <h2>Contact Information</h2>
         <ul>
-            <li><strong>Address:</strong></li>
-            <li><strong>Email:</strong></li>
-            <li><strong>Phone:</strong></li>
+            <li><a href="mailto:damasemmanuel689@gmail.com"><strong>Send your feedback here</strong></a></li>
+            <li><strong>Address:Mwalimu Julius Nyerere Mlimani campus
+               P.O.Box 35062,Dar es Salaam
+            </strong></li>
+            <li><strong>Phone:+255765689557</strong></li>
         </ul>
         <hr>
         <h2>Contact Form</h2>
-        <form action="index.html" method="GET">
+        <form action="/ submit-your-form" method="POST">
            <p> 
-            <label>Name:</label><input type="text" name="name" required><br>
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
            </p>
-            <label>Email:</label><input type="email" name="email"required>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
          <p>
             Gender:<br>
             <input type="radio" id="male" name="Male" value="Male">
@@ -30,6 +34,8 @@
             Interests:<br>
             <input type="checkbox" id="coding" name="interest">
             <label for="coding">Coding</label><br>
+            <input type="Checkbox" id="Hacking" name="Interest">
+            <label for="Hacking">Hacking</label><br>
          </p>
          <p>
             Message:<br>
