@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact Page</title>
+    </head>
+    <body>
+        <a href="index.html">Home</a>
+        <h2>Contact Information</h2>
+        <ul>
+            <li><strong>Address:</strong></li>
+            <li><strong>Email:</strong></li>
+            <li><strong>Phone:</strong></li>
+        </ul>
+        <hr>
+        <h2>Contact Form</h2>
+        <form action="index.html" method="GET">
+           <p> 
+            <label>Name:</label><input type="text" name="name" required><br>
+           </p>
+            <label>Email:</label><input type="email" name="email"required>
+         <p>
+            Gender:<br>
+            <input type="radio" id="male" name="Male" value="Male">
+            <label for="Male">Male</label></br>
+            <input type="radio" id="Female" name="Female" value="Female">
+            <label for="Female">Female</label>
+         </p>
+         <p>
+            Interests:<br>
+            <input type="checkbox" id="coding" name="interest">
+            <label for="coding">Coding</label><br>
+         </p>
+         <p>
+            Message:<br>
+            <textarea name="message" rows="4" cols="30"></textarea>
+         </p>
+         <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+         </p>
+        </form>
+    </body>
+</html>
