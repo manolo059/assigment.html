@@ -1,0 +1,56 @@
+body {
+background-color: darkcyan;
+}
+
+h1{
+    font-size: large;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: small;
+    font-style: italic;
+}
+
+table{
+    width: 100%;/*the table takes 100% of the full width of the page*/
+    border-collapse: collapse;/*borderof the table becomes one clean line*/
+    background-color: aliceblue;
+}
+th{
+    background-color: navy;
+    color: white;
+    text-align: left;/*text starts from left*/
+    padding: 10px 15px;/*space between content and the border*/
+}
+td{
+    padding: 10px 15px;
+}
+tr :hover td{
+    background-color: navy;
+}
+/*normal state*/
+p {
+    color: black;
+    background-color: white;
+    transition: 0.5s;/*animate takes 0.5s to complete*/
+}
+/*hover state*/
+p:hover {
+    color: white;
+    background-color: navy;
+}
+/*normal state when link is not visited*/
+a {
+    color: navy;
+    text-decoration: none;/*removes the underline*/
+}
+/*hover effect*/
+a:hover{
+    color:white ;
+    background-color: navy;
+}
+/*when clicking it*/
+a:active{
+    color: red;
+}

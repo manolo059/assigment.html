@@ -1,0 +1,103 @@
+/* GENERAL */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background:#f0f2f5 ;
+    color: #111;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+/* HEADINGS */
+h1 {
+    text-align: center;
+    font-size: 36px;
+}
+
+h2 {
+    margin-top: 30px;
+    border-left: 4px solid black;
+    padding-left: 10px;
+    border-left: 4px solid #007BFF;
+}
+
+/* CARD STYLE */
+.card {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+    
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+
+/* TEXT */
+p {
+    line-height: 1.6;
+    color: #444;
+}
+
+/* LIST */
+ul {
+    padding-left: 20px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* IMAGE */
+img {
+    border-radius: 10px;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+/* CENTER */
+.center {
+    text-align: center;
+}
+a[href="index.html"]:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}

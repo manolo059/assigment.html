@@ -1,0 +1,96 @@
+/* GENERAL PAGE STYLE */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, blue, lightblue); /* advanced */
+    color: black;
+    margin: 5;
+}
+
+/* HEADINGS */
+h1 {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px; /* advanced: rounded corners */
+    text-align: center;
+}
+
+h2 {
+    color: blue;
+    border-bottom: 2px solid blue;
+}
+
+/* PARAGRAPHS */
+p {
+    padding: 10px;
+    line-height: 1.6;
+}
+
+/* LISTS */
+ul {
+    background-color: pink;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* TABLE STYLING */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th {
+    background-color: blue;
+    color: white;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* IMAGE STYLING */
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius:40%; /* advanced */
+    border: 4px solid blue;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline; /* hover effect */
+}
+
+/* BOX SHADOW (ADVANCED) */
+ul, table {
+    box-shadow: 0 4px 10px green;
+}
+
+/* SIMPLE ANIMATION (ADVANCED) */
+h1:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+img:hover {
+    transform: scale(2.2);
+    transition: 0.3s;
+}
+a[href="index.html"]:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}

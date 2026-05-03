@@ -4,39 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PERSONAL PORTFOIL PAGES</title>
+    <title>ALINE'S PORTFOIL </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1> PERSONAL INFORMATION </h1>
-    <h3> NAME: Aline Abdon Rwegasira </h3>
-    <p> I believe in becoming better not just for success, but for a purpose.</p>
-    <p>I strive to grow mentally, financially and personally, </p>
-    <p> knowing that each small effort today builds a stronger,</p>
-    <p> more confident version of me tomorrow. </p>
-    </body>
-    <body>
-    <h2><strong> SKILLS </strong> </h2>
-    <p> Your girl Aline has got several skills as follows:</p>
-    <ul> 
-    <li> Sports </li>
-    <ol>
-        <li> Netball </li>
-        <li> Swimming</li>
-        <li> Volleyball </li>
-        <li> Yoga </li>
-    </ol>
- <li> Continuous learning skills: The capacity to acquire new skills rapidly.</li>
- <li> Soft skills </li>
- <ol>
-    <li> Problem solving </li>
-    <li> Motivation </li>
-    <li> Collaboration </li>
- </ol>
- </ul>
-    </body>
+        <h1> PERSONAL INFORMATION </h1>
+        <h3> NAME: Aline Abdon Rwegasira </h3>
+        <h2> BIOGRAPHY </h2>
+        <p> I believe in becoming better not just for success, but for a purpose.
+            I strive to grow mentally, <br>financially and personally, 
+            knowing that each small effort today builds a stronger,
+            more confident version of me tomorrow. 
+        </p>
+    </div>
+</div>
+   <div>
+    <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid-wrapper">
+        <div class="skill-card">
+            <h3>Sports</h3>
+            <ol>
+                <li>Netball</li>
+                <li>Swimming</li>
+                <li>Volleyball</li>
+            </ol>
+        </div>
+        <div class="skill-card">
+            <h3> Continuous learning skills: The capaciity to acquire new skills rapidly </h3>
+        </div>
+        
+        <div class="skill-card">
+            <h3>Soft Skills</h3>
+            <ol>
+                <li>Problem Solving</li>
+                <li>Motivation</li>
+                <li>Collaboration</li>
+            </ol>
+        </div>
+    </div>
+</section>
+</div>
+ <div>
     <h2><strong> EDUCATION </strong></h2>
     <!-- the <table border> tag opens a table-->
-    <table border="1"> 
+    <table border> 
         <caption><strong> Table showing education status</strong></caption>
     <thead>
         <tr> 
@@ -81,20 +94,65 @@
         </tr>
     </tbody>
     </table border>
-    <h2><strong> HOBBIES </strong></h2>
-    <ul>
-        <li> Listening to music: RNB songs, Amapiano songs, Afro music, Spanish songs, Sad songs, Love songs</li>
-        <li> Dancing </li>
-        <li> Singing </li>
-        <li> Reading books: Motivational books & Novels(story books)</li>
-        <li> Watching movies: All movie types except horror movies.</li>
-        <li> Sleeping </li> 
-    </ul>
+    </div>
+    <div>
+     <div class="list-container">
+    <section id="hobbies">
+
+    <h2><strong>My Hobbies</strong></h2>
+    <div class="hobby-flow">
+        
+        <div class="hobby-row">
+            <div class="hobby-content">
+                <h3>Music & Arts</h3>
+                <p>I find peace in RNB, Amapiano, and Spanish rhythms. Dancing and singing are my ways of expressing what words cannot.</p>
+            </div>
+        </div>
+
+        <div class="hobby-row alternate">
+            <div class="hobby-content">
+                <h3>Literature</h3>
+                <p>Reading motivational books and novels keeps my mind sharp. It's a journey into a different world from the comfort of home.</p>
+            </div>
+        </div>
+
+        <div class="hobby-row">
+            <div class="hobby-content">
+                <h3>Leisure</h3>
+                <p>From watching every movie genre (minus horror!) to the simple bliss of a long sleep, I value my downtime deeply.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+    </div>
+</section>
+    </div>
+    <div>
 <h2><strong> IMAGE SECTION </strong></h2>
-    <img src="alin.jpeg" width = "300" height = "350" alt="this is an image of me">
- <p>This is a picture of me </p>
+    <!-- Move this section right after your biography or wherever you'd like it centered -->
+<div class="image-container">
+    <img src="alin.jpeg" 
+         alt="Aline Abdon Rwegasira" width="300"
+         class="profile-picture">
+</div>
+</div>
+<div>
+    <p>This is a picture of me </p>
+    </div>
+    <div>
     <h2><strong> MY FAVOURITE LINKS</strong></h2>
-    <!-- create two hyperlinks -->
-<p><a href="https://www.instagram.com/_iris_yoldemere?igsh=MXU2cHFkaWszNGdlNw%3D%3D&utm_source=qr">Follow me on Instagram</a></p>
+    <!-- create one hyperlinks -->
+<!-- 1. Put this line at the very top of your file to get the icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- 2. This is the link itself -->
+<div class="link-box">
+    <a href="https://www.instagram.com/_iris_yoldemere" target="_blank" class="insta-link">
+        <i class="fab fa-instagram"></i> Visit My Instagram
+    </a>
+</div>
+</div>
+<a href="index.html">Back to Home</a>   
 </body>
 </html>
