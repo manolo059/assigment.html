@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("warzone.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+h1, h2, h3 {
+    color: darkred;
+}
+p, ol, ul, th, td {
+    color: tan;
+}
+table {
+    width: 70%;
+    border-collapse: collapse;
+    border-color: white;
+}
+th {
+    font-weight: bold;
+}

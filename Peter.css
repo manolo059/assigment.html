@@ -1,0 +1,115 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: black;
+  color: white;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* HEADER */
+header {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+header h1 {
+  color: black; /* heading */
+}
+
+header p {
+  color: black;
+}
+
+/* HEADINGS ZOTE */
+h1, h2 {
+  color: black;
+}
+
+/* SECTIONS */
+section {
+  background: white;
+  color: black;
+  border-left: 5px solid blue;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+/* PARAGRAPHS */
+p {
+  color: black;
+}
+
+/* LIST */
+ul li {
+  color: black;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th {
+  background: black;
+  color: white;
+}
+
+td {
+  background: #f4f4f4;
+  color: black;
+}
+
+tr:hover {
+  background: orange;
+  color: black;
+}
+
+/* IMAGE */
+.profile-img {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid blue;
+  object-fit: cover;
+}
+
+/* LINKS */
+a {
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer a {
+  color: yellow;
+}
+
+/* ADVANCED (TRANSITION + TRANSFORM) */
+section:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+}
