@@ -12,15 +12,6 @@
 /* ==========================================
    2. GLOBAL LAYOUT & CONTAINERS
    ========================================== */
-body {
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
-                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=2073');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
-    margin: 0;
-}
 section {
     background: rgba(255, 255, 255, 0.85); 
     backdrop-filter: blur(15px);
@@ -290,7 +281,6 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
     margin: 0;
-    
     /* This creates a 20px margin effect on the left and right */
     padding: 0 20px; 
 }
