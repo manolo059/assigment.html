@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title>Student Portfolio - Profile Page</title>
     <link rel="stylesheet" href="EmmaZ.css">
+    <!---External JS files with defer-->
+    <script src="skills.js" defer></script>
+    <script src="education.js" defer></script>
+    <script src="hobbies.js" defer></script>
+    <script src="lightbox.js" defer></script>
+    <script src="scrollTop.js" defer></script>
+    <script src="modeToggle.js" defer></script>
 </head>
 <body>
 <!-- This section contains personal information -->
@@ -19,33 +26,43 @@
             When I'm not coding, I spend my time exploring new technologies, reading sci-fi novels, and participating 
             in local hackathons. My goal is to become a Full-Stack Developer.
         </p>
+        <!--Dark/Light mode toggle-->
+        <button id="modeToggle">Toggle Mode</button>
     </header>
 
     <hr>
 <!-- This section contains skills -->
     <section>
         <h2>Technical Skills</h2>
-        <ul>
-            <li>Programming Languages
-                <ul>
-                    <li>HTML & CSS</li>
-                    <li>Python</li>
-                    <li>C programming</li>
-                </ul>
-            </li>
+         <div class="skill-item">
+            <span>HTML & CSS</span>
+            <p class="skill-details hidden">I use HTML & CSS to build responsive layouts.</p>
+        </div>
+        <div class="skill-item">
+            <span>Python</span>
+            <p class="skill-details hidden">Python for scripting and problem solving.</p>
+        </div>
+        <div class="skill-item">
+            <span>C Programming</span>
+            <p class="skill-details hidden">C for systems programming and efficiency.</p>
+        </div>
             <h2>Soft Skills</h2>
-                <ul>
-                    <li>Problem Solving</li>
-                    <li>Team Collaboration</li>
-                </ul>
-        </ul>
+             <div class="skill-item">
+            <span>Problem Solving</span>
+            <p class="skill-details hidden">Ability to analyze and solve complex challenges.</p>
+        </div>
+        <div class="skill-item">
+            <span>Team Collaboration</span>
+            <p class="skill-details hidden">Working effectively in diverse teams.</p>
+        </div>   
     </section>
 
     <hr>
 <!-- This section contains education background --> 
     <section>
         <h2>Education</h2>
-        <table border="1">
+        <button id="sortBtn">Sort by Year</button>
+        <table id="educationTable" border="1" data-sort-order="asc">
             <thead>
                 <tr>
                     <th>Level</th>
@@ -82,17 +99,25 @@
 <!-- This section contains hobbies and interests -->
     <section>
         <h2>Hobbies & Interests</h2>
-        <ul>
-            <li><strong>Travelling:</strong> Capturing urban landscapes and nature.</li>
-            <li><strong>Gaming:</strong> Enjoying strategy and open-world.</li>
-            <li><strong>Music:</strong> For refreshment.</li>
-        </ul>
+        <div class="hobby">
+            <p class="hobby-desc" data-short="Travelling:">Travelling: Capturing urban landscapes and nature.</p>
+            <button class="toggleBtn">Read More </button>
+        </div>
+        <div class="hobby">
+            <p class="hobby-desc" data-short="Gaming:">Gaming: Enjoying strategy and open-world adventures.</p>
+            <button class="toggleBtn">Read More</button>
+        </div>
+        <div class="hobby">
+            <p class="hobby-desc" data-short="Music:">Music: Listening for refreshment and creativity.</p>
+            <button class="toggleBtn">Read More</button>
+        </div>
     </section>
 
     <hr>
 <!-- This section contains profile image -->
     <section>
         <h2>Gallery</h2>
+        <div class="gallery">
         <img src="profile.jpeg" alt="Profile Photo of Emmanuel" width="300">
         <img src="activity.jpeg" alt="Coding at a hackathon" width="300">
     </section>
@@ -112,6 +137,7 @@
         </ul>
     </section>
     <a href="index.html">Back to Home</a>
-
+ <!-- Scroll to top button -->
+    <button id="scrollTopBtn">Scroll to Top</button>
     </body>
 </html>

@@ -104,3 +104,14 @@ a[href="index.html"]:hover {
   background: #0056b3;
   transform: scale(1.05);
 }
+/* Default light mode */
+body {
+  background: #fff;
+  color: #000;
+}
+
+/* Dark mode overrides */
+.dark-mode {
+  background: #222;
+  color: #eee;
+}

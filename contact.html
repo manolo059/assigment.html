@@ -237,6 +237,13 @@ input[type="submit"]:hover {
 input[type="reset"]:hover {
   background: #5a6268;
 }
+.error {
+  color: red;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
 
          </style>
     </head>
@@ -254,16 +261,20 @@ input[type="reset"]:hover {
         <form action="/ submit-your-form" method="POST">
            <p> 
             <label for="name">Full Name:</label><br>
-            <input type="text" id="name" name="name" required><br>
+            <input type="text" id="name" name="name" required>
+            <span id="nameError" class="error">Please enter your name.</span>
            </p>
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" required>
+            <span id="emailError" class="error">Please enter a valid email address.</span>
+         </p>
          <p>
             Gender:<br>
-            <input type="radio" id="male" name="Male" value="Male">
-            <label for="Male">Male</label></br>
-            <input type="radio" id="Female" name="Female" value="Female">
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label></br>
+            <input type="radio" id="Female" name="gender" value="Female">
             <label for="Female">Female</label>
+            <span id="genderError" class="error">Please select your gender.</span> 
          </p>
          <p>
             Interests:<br>
@@ -271,15 +282,23 @@ input[type="reset"]:hover {
             <label for="coding">Coding</label><br>
             <input type="Checkbox" id="Hacking" name="Interest">
             <label for="Hacking">Hacking</label><br>
+            <input type="checkbox" id="Gaming" name="Interest">
+            <label for="Gaming">Gaming</label><br>
+            <input type="checkbox" id="Designing" name="interest">
+            <label for="Designing">Designing</label><br>
+            <span id="interestError" class="error">Please select at least one interest.</span>
          </p>
          <p>
             Message:<br>
             <textarea name="message" rows="5" cols="50"></textarea>
+            <span id="messageError" class="error">Please enter your message.</span>
          </p>
          <p>
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
          </p>
         </form>
+        <script src="js/form-validation.js"></script>
+
     </body>
 </html>
