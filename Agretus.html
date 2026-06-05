@@ -1,165 +1,247 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>My Profile</title>
-        <link rel="icon" type="image/jpg" href="udsm_logo.jpg" />
-        <link rel="stylesheet" href="style.css" />
-        <!-- Link to Font Awesome for icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    </head>
-    <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="icon" type="image/jpg" href="udsm_logo.jpeg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-        <div class="theme-control-panel">
-            <button id="theme-toggle-btn" class="theme-btn">⚪ Light Mode</button>
+  <!-- Main application container -->
+  <div class="app-container">
+    
+    <!-- Sidebar navigation panel -->
+    <aside class="sidebar" id="sidebar-panel">
+      <div class="sidebar-brand">
+        <h2>Personal Portfolio</h2>
+      </div>
+      <nav class="sidebar-menu">
+        <a href="#biography" class="menu-item">👤 Biography</a>
+        <a href="#skills" class="menu-item">🎨 Skills</a>
+        <a href="#education" class="menu-item">🎓 Education Background</a>
+        <a href="#hobbies" class="menu-item">❤️ Hobbies</a>
+        <a href="#images" class="menu-item">🖼️ Images</a>
+        <a href="#links" class="menu-item">🔗 Favorite Links</a>
+        <a href="#contact" class="menu-item">🌐 Contact Info</a>
+      </nav>
+    </aside>
+
+    <!-- Main content area with profile sections -->
+    <main class="main-content">
+        <header class="top-header">
+          <div></div>
+          <div class="header-actions">
+            <button id="theme-toggle-btn" class="portal-link-btn" style="padding: 8px 15px; cursor: pointer;">
+              🌞 Light Mode
+            </button>
+          </div>
+        </header>
+
+        <!-- Biography section -->
+        <div class="dashboard-panel" id="biography">
+          <h3 class="panel-title">👤 Biography</h3>
+          <div class="bio-wrapper">
+            <div class="bio-text">
+              <h2 class="name">Agretus Mwombeki John</h2>
+              <p>
+                I'm a student with a passion for learning and growth. I enjoy exploring new ideas and connecting with others. 
+                What I really want to do is to become a full-time big data analyst and a data scientist. 
+                I have a strong interest in data analysis and data science, and I am eager to develop my skills in these areas. 
+                I'm committed to continuous learning and growth, and I am excited about the opportunities that lie ahead in my journey.
+              </p>
+              <p>
+                I usually spend my free time watching YouTube videos about artificial intelligence, fintech, and data science. I also like reading books.
+              </p>
+            </div>
+            <div>
+              <img src="mimi.jpeg" alt="Profile picture" width="220" height="260" title="My Personal Picture"/>
+            </div>
+          </div>
         </div>
 
-        <h1>Personal Information</h1>
-        <!-- Simple explanation about me-->
-        <h2>Agretus Mwombeki John</h2>
-            <img src="mimi.jpeg" title="My Personal Picture"  alt="Personal Picture" 
-            width="250" height="300" class="lightbox-trigger" />
-        <h3>Biography</h3>
-        <p>I'm a student with a passion for learning and growth. I enjoy exploring new ideas and connecting with others. <br />What I really want to do is to become a full-time big data analyst and a data scientist. I have a strong interest in data analysisi and data science, and I am eager to develop my skills in these areas. I am committed to continous learning and growth, and I am excited about the opportumities that lie ahead in my journey to becoming a big data analyst and data scientist.
-        </p>
+        <!-- Skills section -->
+        <div class="dashboard-panel" id="skills">
+          <h3 class="panel-title">🎨 Professional & Interpersonal Skills</h3>
+          <div class="skills-vertical-stack">
             
-        <p>I usually spend my free time watching youtube videos about artificial intelligence, fintech, and
-            data science. During the weekends, I also like to read books and articles about these topics.
-        </p> 
-        <br /><h2>Skills</h2>
-        <ol class="skills-list">
-            <li class="skill-item">
-                <span class="skill-trigger">Programming Languages</span>
-                <p class="skill-details hidden">Building fundamental programming logic, memory management systems, and understanding computational architectures through structured code execution.</p>
-                <ul>
-                    <li>C programming</li>
-                    <li>Foundation for Java</li>
-                </ul>
-            </li>
-            <li class="skill-item">
-                <span class="skill-trigger">Web Development</span>
-                <p class="skill-details hidden">Creating responsive, structural web pages using structural semantic tags and advanced layout styling systems.</p>
-                <ul>
-                    <li>HTML</li>
-                    <li>Foundation for CSS</li>
-                    <li>Foundation for JavaScript</li>
-                </ul>
-            </li>
-            <li class="skill-item">
-                <span class="skill-trigger">Social Skills</span>
-                <p class="skill-details hidden">Developing collaborative work environments, active listening skills, and effective group engineering decision-making matrices.</p>
-                <ul>
-                    <li>Effective Communication</li>
-                        <ul>
-                            <li>Active Listening</li>
-                            <li>Clear and Concise Expression</li>
-                            <li>Nonverbal Communication</li>
-                            <li>Empathy</li>
-                            <li>Customer Service</li>
-                        </ul>
-                    <li>Teamwork</li>
-                    <li>Decision Making</li>
-                    <li>Problem Solving</li>
-                    <li>Time Management</li>
-                </ul>
-            </li>
-        </ol>
-        <br />
-        <h2>Educational Background</h2>
-        <table id="education-table">
-            <thead>
+            <div class="skill-category-box interactive-skill-trigger">
+              <h4 class="skill-header">Programming Languages <span class="toggle-indicator-icon">🔽</span></h4>
+              <p class="skill-summary-line hidden">Building fundamental programming logic, memory management systems, and understanding computational architectures through structured code execution.</p>
+              <ul class="persistent-skill-list">
+                <li>C programming</li>
+                <li>Java</li>
+              </ul>
+            </div>
+
+            <div class="skill-category-box interactive-skill-trigger">
+              <h4 class="skill-header">Web Development <span class="toggle-indicator-icon">🔽</span></h4>
+              <p class="skill-summary-line hidden">Creating responsive, structural web pages using structural semantic tags and advanced layout styling systems.</p>
+              <ul class="persistent-skill-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+
+            <div class="skill-category-box interactive-skill-trigger">
+              <h4 class="skill-header">Social Skills <span class="toggle-indicator-icon">🔽</span></h4>
+              <p class="skill-summary-line hidden">Developing collaborative work environments, active listening methodologies, and effective group engineering decision-making matrices.</p>
+              <ul class="persistent-skill-list">
+                <li>Effective Communication</li>
+                <li>Teamwork</li>
+                <li>Decision Making and Problem Solving</li>
+                <li>Time Management</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Education background section -->
+        <div class="dashboard-panel" id="education">
+          <h3 class="panel-title">🎓 Educational Background</h3>
+            <table class="education-table" id="edu-table">
+              <thead>
                 <tr>
-                    <th>Education Level</th>
-                    <th>School/Institution</th>
-                    <th>Field of Study</th>
-                    <th>Year <button id="sort-year-btn" class="sort-btn">⬆️</button></th>
+                  <th>Education Level</th>
+                  <th>School/Institution</th>
+                  <th>Field of Study</th>
+                  <th class="sorting-header-cell">
+                    <span>Year</span>
+                    <button id="sort-education-btn" title="Sort List by Year">⬇️</button>
+                  </th>
                 </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Undergraduate</td>
-                    <td>University of Dar es Salaam</td>
-                    <td>Computer Science</td>
-                    <td>2025 - Present</td>
+              </thead>
+              <tbody>
+                <tr data-year="2025">
+                  <td><strong>Undergraduate</strong></td>
+                  <td>University of Dar es Salaam</td>
+                  <td>Computer Science</td>
+                  <td>2025 - Present</td>
                 </tr>
-                <tr>
-                    <td>Advanced Secondary School</td>
-                    <td>Bugene High School</td>
-                    <td>PCM Combination</td>
-                    <td>2023 - 2025</td>
+                <tr data-year="2023">
+                  <td><strong>Advanced Secondary School</strong></td>
+                  <td>Bugene High School</td>
+                  <td>PCM Combination</td>
+                  <td>2023 - 2025</td>
                 </tr>
-                <tr>
-                    <td>Secondary Education</td>
-                    <td>Kiturimo Boys' Secondary School</td>
-                    <td>All Major Subjects</td>
-                    <td>2019 - 2022</td>
+                <tr data-year="2019">
+                  <td><strong>Secondary Education</strong></td>
+                  <td>Kiturimo Boys' Secondary School</td>
+                  <td>All Major Subjects</td>
+                  <td>2019 - 2022</td>
                 </tr>
-                <tr>
-                    <td>Primary Education</td>
-                    <td>Nyabishenge S/M</td>
-                    <td>All Major Subjects</td>
-                    <td>2012 - 2018</td>
+                <tr data-year="2012">
+                  <td><strong>Primary Education</strong></td>
+                  <td>Nyabishenge S/M</td>
+                  <td>All Major Subjects</td>
+                  <td>2012 - 2018</td>
                 </tr>
-            </tbody>
-        </table>
-        <br />
-        <h2>Hobbies</h2>
-        <ul>
-            <li><strong>Drawing:</strong>To explore different perspectives and emotions.</li>
+              </tbody>
+            </table>
+        </div>
+
+        <!-- Hobbies section -->
+        <div class="dashboard-panel" id="hobbies">
+          <h3 class="panel-title">❤️ Hobbies</h3>
+          <ul class="hobbies-list">
             <li>
-                <strong>Reading Books:</strong> To gain knowledge and insights on various topics. <br />Books I've read include:
-                <button id="read-more-btn" class="hobbies-btn">Read More</button>
-                <ul id="books-list" class="hidden">
-                    <li><cite>The BIBLE</cite> by GOD</li>
-                    <li><cite>Rich Dad's Cashflow Quadrant</cite> by Robert Kiyosaki</li>
-                    <li><cite>Money Formula</cite> by Joel Nanauka</li>
-                    <li><cite>The Magic of Thinking Big</cite> by David Schwartz</li>
-                </ul>
+              <strong>Drawing:</strong> To explore different perspectives and emotions.
             </li>
-            <li><strong>Listening to Music:</strong> For refreshment and relaxation.</li>
-        </ul>
-        <br />
-        <h2>Image Section</h2>
-        <img src="vibe_coding.jpeg" alt="Vibe Coding" width="250" height="300" class="lightbox-trigger" />
-        <img src="avr.jpeg" title="Picture of an Automatic Voltage Regulator (AVR)" alt="Studying the AVR" width="250" height="300" class="lightbox-trigger" />
-        
-        <!-- A list of my favorite links -->
-         <br /><br />
-        <div class="links-section">
-            <h2 class="title">Favorite Links</h2>
-            <p>Here are some of my favorite links that I find useful and interesting:</p>
+            <li>
+              <strong>Reading Books:</strong> 
+              <button class="toggle-hobby-btn">Read More</button>
+              <ul class="sublist hidden" id="expandable-books-list">
+                <li><cite>Rich Dad's Cashflow Quadrant</cite> by Robert Kiyosaki</li>
+                <li><cite>Money Formula</cite> by Joel Nanauka</li>
+                <li><cite>The Magic of Thinking Big</cite> by David Schwartz</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Listening to Music:</strong> For refreshment and relaxation.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Image gallery section -->
+        <div class="dashboard-panel" id="images">
+          <h3 class="panel-title">🖼️ Image Section</h3>
+          <div class="image-gallery">
+              <div class="image-section">
+                <img src="innit.jpeg" alt="HTML Codes" class="lightbox-trigger" height="420" width="400" />
+                <p>Practicing web development</p>
+              </div>
+              <div class="image-section">
+                <img src="avr.jpeg" alt="Picture of an Alternating Voltage Regulator" class="lightbox-trigger" height="420" width="400" />
+                <p>Studying the <abbr title="Alternating Voltage Regulator">AVR</abbr></p>
+              </div>
+          </div>
+        </div>
+
+        <!-- Favorite links section -->
+        <div class="dashboard-panel" id="links">
+          <h3 class="panel-title">🔗 Favorite Links</h3>
+          <p>Here are some of my favorite links that I find useful and interesting for daily tracking and references:
+          </p>
+          <div class="links-grid">
+            <a href="https://lms.udsm.ac.tz/?redirect=0" class="portal-link-btn" target="_blank">🎓 LMS UDSM
+            </a>
+            <a href="https://www.youtube.com/watch?v=HGTJBPNC-Gw&list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3&index=1&t=6s&pp=iAQB" class="portal-link-btn" target="_blank">
+                <img src="youtube_icon.jpeg" height="15px" width="25px" id="youtube-icon"/>HTML & CSS Full Course
+            </a>
+            <a href="https://github.com/MwombekiJohn/JS-Group-Assignment-3" class="portal-link-btn" target="_blank">
+                <img src="github_icon.jpeg" height="15px" width="25px" id="github-icon"/> GitHub Repository
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact information section -->
+        <div class="dashboard-panel" id="contact">
+          <h3 class="panel-title">🌐 Contact Information</h3>
+          <div class="contact-wrapper">
             
-            <ul class="link-list">
-                <li>
-                <i class="fa-solid fa-graduation-cap lms"></i>
-                <a href="https://lms.udsm.ac.tz" target="_blank">LMS UDSM</a>
-                </li>
-                <li>
-                <i class="fa-brands fa-youtube youtube-icon"></i>
-                <a href="https://www.youtube.com/watch?v=HGTJBPNC-Gw" target="_blank">HTML and CSS Tutorial</a>
-                </li>
-                <li>
-                <i class="fa-brands fa-github github-icon"></i>
-                <a href="https://github.com/MwombekiJohn/JS-Assignment-3" target="_blank">GitHub Repository</a>
-                </li>
-            </ul>
-        </div>
-        <br /><br />
-        <!-- Contact Information -->
-         <h3>Contact Information</h3>
-        <address>
-            <p>Email: <a href="mailto:johnmwombeki2@gmail.com">johnmwombeki2@gmail.com</a></p>
-            <p>Phone: +255 788 304 274</p>
-        </address>
-        <p align="right">Copyright &copy; 2026 Mwombeki Agretus. All rights reserved.</p>
+            <div class="contact-item">
+              <div class="contact-details">
+                <p>Written by</p>
+                <h5>Agretus Mwombeki</h5>
+              </div>
+            </div>
 
-        <!-- Scroll-to-Top Navigation Button -->
-        <button id="scroll-to-top-btn" class="scroll-btn hidden" title="Go to top">⬆️</button>
+            <div class="contact-item">
+              <div class="contact-details">
+                <p>Email Address</p>
+                <a href="mailto:johnmwombeki2@gmail.com">johnmwombeki2@gmail.com</a>
+              </div>
+            </div>
 
-        <div id="lightbox" class="lightbox-overlay hidden">
-            <span class="lightbox-close">&times;</span>
-            <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged view">
+            <div class="contact-item">
+              <div class="contact-details">
+                <p>Phone Number</p>
+                <h5>+255 75 123 456</h5>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <script src="profile-mwombeki (1).js"></script>
-    </body>
+
+        <p class="copyright">Copyright &copy; 2026 John Mwombeki. All rights reserved.</p>
+    </main>
+  </div>
+
+  <!-- Modal lightbox overlay for image preview -->
+  <div id="portal-lightbox" class="lightbox-overlay hidden">
+    <span id="lightbox-close-btn" class="lightbox-close">&times;</span>
+    <img id="lightbox-display-img" class="lightbox-content" alt="Enlarged View">
+    <div id="lightbox-caption"></div>
+  </div>
+
+  <!-- Scroll to top button -->
+  <button id="scroll-top-btn" class="scroll-top-badge hidden">⬆️</button>
+
+
+  
+  <script src="portfolio-agretusmwombeki (1).js" defer></script>
+</body>
 </html>

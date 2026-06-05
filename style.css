@@ -1,294 +1,214 @@
+/* 1. GLOBAL ARCHITECTURE & DESIGN VARIABLES */
+:root {
+  --sidebar-bg: #1e3a8a;
+  --sidebar-text: #ffffff;
+  --sidebar-text-muted: #93c5fd;
+  --main-bg: #f1f5f9;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --accent-blue: #0074f8;
+}
+
+body.dark-theme {
+  --sidebar-bg: #090d16;
+  --sidebar-text: #f8fafc;
+  --sidebar-text-muted: #64748b;
+  --main-bg: #0f172a;
+  --card-bg: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(rgba(47, 46, 46, 0.8), rgba(0, 0, 0, 0.8)),
-    url("warzone.jpg") no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-img:hover { /* The image glows when the cursor hovers on it */
-  transform: scale(1.02);
-  box-shadow: 0 0 20px 4px tan;
-  transition: box-shadow 1s ease, transform 0.5s ease;
-}
-h1, h2, h3 {
-    color: darkred;
-}
-p, ol, ul {
-    color: tan;
-}
-table {
-    width: 70%;
-    border-collapse: collapse;
-    border-color: white;
-    background-color: #3c3c3c;
-}
-th, td {
-    color: rgb(239, 172, 47);
+  background-color: var(--sidebar-bg);
+  color: var(--text-main);
+  height: 100vh;
+  overflow: hidden;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Aligning items side-by-side cleanly */
-.link-list li {
+.app-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  height: 100vh;
+}
+
+/* 2. SIDEBAR NAVIGATION COMPONENT */
+.sidebar {
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 2rem 0;
   display: flex;
-  align-items: center; /* Vertically centers the icon geometric shape with the text font */
-  margin-bottom: 12px; /* Smooth padding between individual link options */
+  flex-direction: column;
+  gap: 2rem;
+  transition: background-color 0.3s;
 }
 
-/* Uniform positioning properties for all icons */
-.lms {
-  font-size: 24px;
-  width: 35px;;
-  text-align: center;
-  color: #c73d0f;     /* Added color to differentiate icon from text */
-  transition: transform 0.5s ease;
-}
-.youtube-icon {
-  color: #ff0000; /* Official YouTube Red */
-  font-size: 24px;
-  width: 35px;
-  transition: transform 0.5s ease;
-}
-.github-icon {
-  color: #f0f6fc;          /* Official GitHub dark-mode off-white */
-  font-size: 24px; 
-  width: 35px;
-  transition: transform 0.5s ease;
+.sidebar-brand { padding: 0 1.5rem; }
+.sidebar-brand h2 {
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
 }
 
-.lms:hover {
-  transform: scale(1.1);
-  color: #787373; /* Slightly darker red on hover */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow-y: auto;
 }
-.youtube-icon:hover {
-  transform: scale(1.1);
-  color: #cc0000; /* Slightly darker red on hover */
-}
-/* Smooth hover effect */
-.github-icon:hover {
-  color: #ffffff;          /* Turns pure white on hover */
-  transform: scale(1.1);   /* Optional: slight pop effect */
-}
-/* Hyperlink color preferences */
-.link-list a {
-  color: tomato;       /* Applied to link names */
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.5rem;
+  color: var(--sidebar-text-muted);
   text-decoration: none;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s;
 }
 
-.link-list a:hover {
-  text-decoration: underline;
+.menu-item:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 25px;
 }
 
-
-/*=========================================================================================*/
-/* ADDED STYLES DURING JAVASCRIPT IMPLEMENTATION */
-/* Utility class to hide elements natively without inline styles */
-.hidden {
-    display: none !important;
-}
-/* Make the trigger items look clickable and interactive */
-.skill-trigger {
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none;
-    transition: color 0.3s ease;
+/* 3. MAIN WORKSPACE & PANEL CONSTRUCTS */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: var(--main-bg);
+  border-top-left-radius: 30px; 
+  scroll-behavior: smooth;
+  padding-bottom: 40px;
+  transition: background-color 0.3s;
 }
 
-.skill-trigger:hover {
-    color: tomato; /* Highlights when hovered */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}    
+
+.dashboard-panel {
+  background-color: var(--card-bg);
+  padding: 25px;
+  margin: 10px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: background-color 0.3s;
 }
 
-/* Style the details paragraph nicely when it shows up */
-.skill-details {
-    margin: 8px 0;
-    padding: 8px;
-    background-color: #2b2b2b;
-    border-left: 3px solid darkred;
-    font-style: italic;
+.panel-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+  margin-bottom: 20px;
 }
 
-/* === Adding styles for the sorting button === */
-#education-table th, #education-table td {
-    border: 1px solid white;
-    padding: 10px;
-    text-align: left;
+/* Biography Module */
+.bio-wrapper { display: flex; gap: 20px; }
+.bio-text { display: flex; flex-direction: column; gap: 15px; line-height: 1.6; }
+.name {
+  background-color: #edecec;
+  border-radius: 35px;
+  padding: 12px;
+  display: inline-block;
+  transition: background-color 0.5s, color 1s, transform 0.5s;
 }
+body.dark-theme .name { background-color: #334155; color: #f8fafc; }
+.name:hover { color: rgb(97, 74, 15); background-color: #cacdcf; }
 
-/* Style the sort button */
-.sort-btn {
-    background: none;
-    border: none;
-    color: rgb(239, 172, 47);
-    font-size: 14px;
-    cursor: pointer;
-    margin-left: 5px;
-    padding: 2px 6px;
-    border-radius: 4px;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+/* 4. UI SUB-SECTION COMPONENTS (SKILLS, EDUCATION, HOBBIES) */
+/* Vertical Skills Stack */
+.skills-vertical-stack { display: flex; flex-direction: column; gap: 1.25rem; }
+.skill-category-box {
+  background: var(--main-bg);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
 }
+.skill-category-box:hover { border-color: var(--accent-blue); background-color: rgba(0, 116, 248, 0.02); }
+.skill-header { display: flex; justify-content: space-between; margin-bottom: 10px; }
+.toggle-indicator-icon { font-size: 0.9rem; color: var(--text-muted); transition: transform 0.2s; }
+.skill-summary-line {
+  font-size: 0.95rem;
+  background-color: rgba(0, 116, 248, 0.06);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  font-weight: 500;
+  border-left: 4px solid var(--accent-blue);
+}
+.persistent-skill-list { padding-left: 20px; }
+.persistent-skill-list li { margin-bottom: 5px; }
 
-.sort-btn:hover {
-    background-color: #4a4a4a;
-    transform: scale(1.1);
-}
-/* Style for the Hobbies Read More button */
-.hobbies-btn {
-    background-color: darkred;
-    color: tan;
-    border: none;
-    padding: 3px 8px;
-    margin-left: 6px;
-    font-size: 12px;
-    font-family: inherit;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
+/* Academic Tables Layout */
+.education-table { width: 100%; border-collapse: separate; border-radius: 10px; border: 1px solid var(--border-color); overflow: hidden; }    
+.education-table th, .education-table td { padding: 15px; text-align: left; }
+.education-table th { background-color: #eef1f4; font-weight: 600; border-bottom: 2px solid var(--border-color); }
+body.dark-theme .education-table th { background-color: #334155; }
+.education-table td { border-bottom: 1px solid var(--border-color); }
+.education-table tr:last-child td { border-bottom: none; }
+.education-table tr:hover { background-color: rgba(238, 241, 244, 0.5); }
+body.dark-theme .education-table tr:hover { background-color: #334155; }
+.sorting-header-cell { display: flex; justify-content: space-between; align-items: center; }
+#sort-education-btn { background: none; border: none; color: var(--accent-blue); cursor: pointer; padding: 4px 8px; border-radius: 4px; }
+#sort-education-btn:hover { background-color: rgba(0, 116, 248, 0.1); }
 
-.hobbies-btn:hover {
-    background-color: rgb(239, 172, 47);
-    color: #000000;
-}
+/* Interactive Hobbies Module */
+.hobbies-list { list-style: none; display: flex; flex-direction: column; gap: 15px; }
+.hobbies-list > li { background: var(--main-bg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--accent-blue); }
+.toggle-hobby-btn { background: var(--accent-blue); color: white; border: none; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; cursor: pointer; margin-left: 10px; font-weight: 500; }
+.sublist { list-style: disc; margin-top: 10px; padding-left: 25px; display: flex; flex-direction: column; gap: 6px; }
 
-/* === Styles for the image section === */
-/* Full-screen dark translucent backdrop */
-.lightbox-overlay {
-    position: fixed;
-    z-index: 9999; /* Ensures it sits on top of all other layout layers */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Deep dark dimming effect */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* 5. GALLERY, LINKS, UTILITIES & OVERLAYS */
+/* Image Grid System & Popups */
+.image-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+.image-section { background: var(--main-bg); padding: 10px; text-align: center; border: 1px solid var(--border-color); border-radius: 15px; }
+.image-section img { border-radius: 8px; max-width: 100%; height: auto; object-fit: cover; }
+.lightbox-trigger { cursor: pointer; transition: transform 0.2s; }
+.lightbox-trigger:hover { transform: scale(1.02); }
 
-/* The actual high-resolution preview frame */
-.lightbox-content {
-    max-width: 80%;
-    max-height: 80%;
-    border: 3px solid rgb(239, 172, 47);
-    border-radius: 4px;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
-    transform: scale(0.95);
-    transition: transform 0.3s ease-in-out;
-}
+.lightbox-overlay { position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 42, 0.95); display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.lightbox-content { max-width: 85%; max-height: 75%; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); }
+#lightbox-caption { margin-top: 15px; color: #94a3b8; font-size: 1.1rem; font-weight: 500; }
+.lightbox-close { position: absolute; top: 30px; right: 40px; color: #f1f5f9; font-size: 45px; font-weight: bold; cursor: pointer; }
+.lightbox-close:hover { color: #ef4444; }
 
-/* When the lightbox opens, pop the image scale forward slightly */
-.lightbox-overlay:not(.hidden) .lightbox-content {
-    transform: scale(1);
-}
+/* Hyperlinks & Contact Details */
+.links-grid { display: flex; gap: 25px; }
+.portal-link-btn { display: inline-flex; align-items: center; padding: 10px; gap: 10px; background-color: var(--main-bg); text-decoration: none; color: var(--text-main); border-radius: 15px; border: 1px solid var(--border-color); }
+.portal-link-btn:hover { background-color: var(--accent-blue); color: white !important; }
+#youtube-icon { border-radius: 5px; }
+#github-icon { border-radius: 50%; }
 
-/* The top-right close 'X' button engineering */
-.lightbox-close {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    color: tan;
-    font-size: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
+.contact-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.contact-item { display: flex; align-items: center; gap: 12px; }
+.contact-details a { color: var(--accent-blue); text-decoration: none; }
 
-.lightbox-close:hover {
-    color: darkred;
-    transform: scale(1.1);
-}
-
-/* Give the page pictures a cursor indicator showing they can be expanded */
-.lightbox-trigger {
-    cursor: zoom-in;
-}
-
-/* === SCROLL-TO-TOP BUTTON DESIGN === */
-.scroll-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 999; /* Keeps it right beneath the lightbox layer but above text layout layers */
-    background-color: darkred;
-    color: tan;
-    border: 2px solid rgb(239, 172, 47);
-    padding: 12px 16px;
-    font-size: 18px;
-    font-family: inherit;
-    cursor: pointer;
-    border-radius: 50%; /* Perfect circle */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-}
-
-/* Micro-interaction layout bounce */
-.scroll-btn:hover {
-    background-color: rgb(239, 172, 47);
-    color: #000000;
-    transform: translateY(-4px); /* Moves up slightly on hover */
-}
-
-/* --- THEME SWITCHER CONTROL DESIGN --- */
-.theme-control-panel {
-    text-align: right;
-    padding: 15px 20px 0 0;
-}
-
-.theme-btn {
-    background-color: rgb(239, 172, 47);
-    color: #000000;
-    border: none;
-    padding: 8px 14px;
-    font-size: 14px;
-    font-family: inherit;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 20px; /* Capsule shape styling */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.theme-btn:hover {
-    background-color: darkred;
-    color: tan;
-    transform: scale(1.05);
-}
-
-/* --- LIGHT MODE TARGET OVERRIDES --- */
-/* The !important flag ensures we overpower the default fixed background image gradient */
-body.light-mode {
-    background: #919294 !important;
-    color: #1a1a1a !important;
-}
-
-body.light-mode p, 
-body.light-mode ol, 
-body.light-mode ul,
-body.light-mode address {
-    color: #2b2b2b !important;
-}
-
-body.light-mode h1, 
-body.light-mode h2, 
-body.light-mode h3 {
-    color: #8b0000 !important; /* Brighter deep red for enhanced light layout contrast */
-}
-
-/* Education Table adjustments for light backgrounds */
-body.light-mode #education-table {
-    background-color: #919294 !important;
-    border: 1px solid #1a1a1a !important;
-}
-
-body.light-mode #education-table th, 
-body.light-mode #education-table td {
-    color: #1a1a1a !important;
-    border: 1px solid #cccccc !important;
-}
-
-/* Skills background adjustments */
-body.light-mode .skill-details {
-    background-color: #e2e8f0;
-    border-left: 3px solid #8b0000;
-}
+/* Bottom Elements & Utility Hooks */
+.hidden { display: none !important; }
+.scroll-top-badge { position: fixed; bottom: 30px; right: 30px; background-color: var(--accent-blue); color: white; border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); display: flex; align-items: center; justify-content: center; z-index: 99; }
+.copyright { text-align: right; font-size: 13px; padding: 20px; margin-top: 20px; color: var(--text-muted); border-top: 1px solid var(--border-color); }
