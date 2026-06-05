@@ -1,12 +1,3 @@
-/**
- * script.js
- * ---------
- * This script handles two visual features on the page:
- *  1. A live digital clock that updates every second.
- *  2. A typewriter effect that gradually types out a welcome message.
- */
-
-
 // ── DIGITAL CLOCK ────────────────────────────────────────────────────────────
 
 /**
