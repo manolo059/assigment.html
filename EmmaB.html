@@ -1,104 +1,230 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="EmmaB.css"/>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>Personal portifolio</h2>
-    <h4>Personal information</h4>
-    <h1><b>Emmanuel Benard</b></h1>
-    <h4><b>Computer Science Student - University of Dar es Salaam</b> 
-    </h4>
-    <h4><b>Registration Number:</b>2025-04-11304</h4>
-    <h3><b>About Me</b></h3>
-    <p>My name is Emmanuel Benard a first year student at the University of Dar es Salaam. I was born and raised in Tanzania and always had a strong passion for technology and how it can be used to solve everyday problems in our society.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Emmanuel Benard - Personal Profile</title>
+    <link rel="stylesheet" href="EmmaB.css" />
+  </head>
+  <body>
 
-    <p>I am currently pursuing my Bachelor of Science in Computer Science where I study subjects like Discete Mathematics,Computer Organization and Architecture, C programming and Web development. These courses have helped me build a strong foundation in both theoretical and practical sides of computing.</p>
-  
-    <h3>Skills</h3>
-    <dl>
-        <dt>1. Programming</dt>
-        <dd>-C programming</dd>
-        <dd>-HTML5</dd>
-        <dd>-Java</dd>
-    </dl>
-    <dl>
-        <dt>2. Soft skills</dt>
-        <dd>-Teamwork</dd>
-        <dd>-Time management</dd>
-        <dd>-Communication</dd>
-        <dd>-Time management</dd>
-    </dl>
-    <h3>Education</h3>
-    <table border="1">
-        <!--row 1-->
-        <tr>
-            <th>Level</th>
-            <th>School/Institution</th>
-            <th>Year</th>
-        </tr>
-        <!--row 2-->
-        <tr>
-            <td>University level</td>
-            <td>University of Dar es Salaam</td>
-            <td>2025- Present</td>
-        </tr>
-        <tr>
-            <td>Advanced secondary level</td>
-            <td>Marian Boys High School</td>
-            <td>2023-2025</td>
-        </tr>
-        <tr>
-        <td>O-Level (Ordinary Secondary)</td>
-        <td>[Your O-Level School]</td>
-        <td>2018 &mdash; 2022</td>
-        </tr>
-        <tr>
+    <!-- Dark Mode Toggle – top-right corner -->
+    <button id="dark-mode-btn">🌙 Dark Mode</button>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="profile_emmanuel.html">My Profile</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Live Clock – updated every second by JS (Feature 6) -->
+    <div id="live-clock">Loading time…</div>
+
+    <!-- Greeting – set dynamically based on time of day (Feature 2) -->
+    <div id="greeting-box">Welcome!</div>
+
+    <hr/>
+
+    <!-- ── 1. PERSONAL INFORMATION ── -->
+    <h1>Emmanuel Benard</h1>
+    <h3>Computer Science Student &mdash; University of Dar es Salaam</h3>
+    <p><strong>Registration Number:</strong> 2025-04-11304</p>
+
+    <hr/>
+
+    <!-- ── 2. BIOGRAPHY with Read More / Read Less (Feature 5) ── -->
+    <h2>About Me</h2>
+    <img src="EmmaB.jpeg" height="450px" width="350ps"/>
+
+    <!-- First paragraph always visible -->
+    <p>
+      My name is Emmanuel Benard and I am a first-year Computer Science student at the
+      University of Dar es Salaam, Tanzania. I was born and raised in Tanzania and I have
+      always had a strong passion for technology and how it can be used to solve everyday
+      problems in our society.
+    </p>
+
+    <!-- These paragraphs are hidden; JS toggles them on "Read More" click -->
+    <p class="bio-extra">
+      I am currently pursuing my Bachelor of Science in Computer Science where I study
+      subjects such as Discrete Mathematics, Computer Organization and Architecture, C
+      Programming, and Web Development. These courses have helped me build a strong
+      foundation in both the theoretical and practical sides of computing.
+    </p>
+
+    <p class="bio-extra">
+      My dream is to become a skilled software developer and contribute to the growth of
+      technology in East Africa. I believe that with determination and hard work, technology
+      can transform lives and communities across the continent.
+    </p>
+
+    <!-- Button text toggled by JS -->
+    <button id="read-more-btn">Read More ▼</button>
+
+    <hr/>
+
+    <!-- ── 3. SKILLS with Filter Buttons (Feature 4) ── -->
+    <h2>Skills</h2>
+
+    <!-- Filter buttons; data-category tells JS which list items to show -->
+    <div class="skill-filters">
+      <button class="skill-filter-btn active-filter" data-category="all">All</button>
+      <button class="skill-filter-btn" data-category="programming">Programming</button>
+      <button class="skill-filter-btn" data-category="mathematics">Mathematics</button>
+      <button class="skill-filter-btn" data-category="computer">Computer Knowledge</button>
+      <button class="skill-filter-btn" data-category="soft">Soft Skills</button>
+    </div>
+
+    <ol>
+      <!-- data-category attribute read by JS to show/hide each item -->
+      <li class="skill-category" data-category="programming">Programming
+        <ul>
+          <li>C Programming</li>
+          <li>HTML5 &amp; CSS</li>
+          <li>Python (Basic)</li>
+        </ul>
+      </li>
+      <li class="skill-category" data-category="mathematics">Mathematics
+        <ul>
+          <li>Discrete Mathematics</li>
+          <li>Logic and Proofs</li>
+          <li>Set Theory</li>
+        </ul>
+      </li>
+      <li class="skill-category" data-category="computer">Computer Knowledge
+        <ul>
+          <li>Computer Organization and Architecture</li>
+          <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+        </ul>
+      </li>
+      <li class="skill-category" data-category="soft">Soft Skills
+        <ul>
+          <li>Teamwork</li>
+          <li>Communication</li>
+          <li>Problem Solving</li>
+          <li>Time Management</li>
+        </ul>
+      </li>
+    </ol>
+
+    <hr/>
+
+    <!-- ── 4. EDUCATION TABLE ── -->
+    <h2>Education</h2>
+
+    <table id="education-table">
+      <tr>
+        <th>Level</th>
+        <th>School / Institution</th>
+        <th>Year
+          <button id="sort-year-btn" title="Sort by Year">🔽</button>
+        </th>
+      </tr>
+      <tr>
+        <td>University (BSc Computer Science)</td>
+        <td>University of Dar es Salaam</td>
+        <td>2025 &mdash; Present</td>
+      </tr>
+      <tr>
+        <td>A-Level (Advanced Secondary)</td>
+        <td>Marian Boys High School</td>
+        <td>2022 &mdash; 2024</td>
+      </tr>
+      <tr>
+            <td>Ordinary secondary level</td>
+            <td>Sanu seminary</td>
+            <td>2019-2022</td>
+      </tr>
+      <tr>
             <td>Primary school</td>
             <td>Imani Primary School</td>
             <td>2011-2018</td>
-        </tr>
+      </tr>
     </table>
-    <h3>Hobbies & Interests</h3>
-    <ol>
-        <li>Reading books</li>
-        <li>Coding</li>
-        <li>Listening to music</li>
-        <li>Football</li>
-    </ol>
-      <div>
-<h2><strong> IMAGE SECTION </strong></h2>
-    <!-- Move this section right after your biography or wherever you'd like it centered -->
-<div class="image-container">
-    <img src="EmmaB.jpeg" 
-         alt="Emmanuel Bernard" width="300"
-         class="profile-picture">
-</div>
-</div>
 
-    <h3>Favourite links</h3>
+    <hr/>
 
-<ul>
-    <li>
-        <a href="https://www.youtube.com"target="_blank">YouTube
+    <!-- ── 5. HOBBIES ── -->
+    <h2>Hobbies &amp; Interests</h2>
+
+    <ul>
+      <li>
+        <strong>Reading Books</strong>
+        <p>I enjoy reading books on technology, self-development, and African history.</p>
+      </li>
+      <li>
+        <strong>Coding</strong>
+        <p>I love writing programs and building small projects to sharpen my programming skills.</p>
+      </li>
+      <li>
+        <strong>Listening to Music</strong>
+        <p>Music helps me relax and stay focused while studying or working on projects.</p>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <!-- ── 6. GALLERY – images get zoom-on-click from JS (Feature 8) ── -->
+    <h2>Gallery</h2>
+
+    <figure>
+      <!-- class="gallery-img" is targeted by initImageZoom() -->
+      <img class="gallery-img" src="EmmaB.jpeg"
+          alt="Profile photo of Emmanuel Benard" width="200" height="200"/>
+      <figcaption>Emmanuel Benard &mdash; Profile Photo</figcaption>
+    </figure>
+
+    <br/>
+
+    <figure>
+      <img class="gallery-img" src="innit.jpeg"
+          alt="Emmanuel coding activity" width="250" height="250"/>
+      <figcaption>Working on a coding project</figcaption>
+    </figure>
+
+    <hr/>
+
+    <!-- ── 7. MOTIVATIONAL QUOTE ROTATOR (Feature 9) ── -->
+    <h2>Quote of the Moment</h2>
+    <!-- JS cycles through an array of quotes every 5 seconds -->
+    <div class="quote-box" id="quote-display">Loading quote…</div>
+
+    <hr/>
+
+    <!-- ── 8. FAVORITE LINKS ── -->
+    <h2>Favorite Links</h2>
+
+    <ul>
+      <li>
+        <a href="https://www.youtube.com" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+              alt="YouTube" width="100" height="30"/>
         </a>
-    </li>
-    <li>
-        <a href="https://www.Instagram.com"target="_blank">
-            <img src="instagram.jpeg" 
-            alt="Instagram"width="30" height="30"/>
+        &nbsp; Visit YouTube
+      </li>
+      <li>
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+              alt="Instagram" width="30" height="30"/>
         </a>
-    </li>
-    <li>
-        <a href="https://github.com" target="_blank">github
-        </a>
-    </li>
-</ul>
-<a href="index.html">Back to Home</a>
+        &nbsp; Visit Instagram
+      </li>
+      <li>
+        <a href="https://github.com" target="_blank">GitHub &mdash; Explore Open Source Projects</a>
+      </li>
+    </ul>
 
+    <hr/>
 
-</body>
+    <footer>
+      <p>&copy; 2026 Emmanuel Benard &mdash; Group 15 | University of Dar es Salaam</p>
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+
+    <!-- Floating scroll-to-top button – shown/hidden by JS (Feature 7) -->
+    <button id="scroll-top-btn" title="Back to top">&#8679;</button>
+    
+    <script src="profile_emmanuel (1).js" defer></script>
+  </body>
 </html>
