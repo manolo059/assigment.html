@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Myportfolio_profile page</title>
+  <link rel="stylesheet" href="Nurdini.css">
+</head>
+<!--This is a personal portfolio webpage-->
+
+<body>
+
+  <!-- This section contains personal information -->
+  <div class="container">
+    <h1>Nurdini`s portfolio </h1>
+    
+    <!-- For dark mode -->
+    <div style="text-align:right;">
+        <button id="darkModeBtn" class="btn">Dark Mode</button>
+    </div>
+
+    <div class="card">
+      <h2>Biography</h2>
+      <p>Hello, Iam Nurdini Abdallah, a Computer Science student at the University of Dar es Salaam (UDSM) with a strong
+        interest in data science and programming</p>
+
+      <p>Beyond technology, I explore creative activities such as handicraft, which enhance my problem-solving and
+        innovative thinking.
+        I enjoy learning from others and exploring social realities through curiosity and observation.</p>
+
+    </div>
+
+    <!-- This section contains skills -->
+    <div class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li  class="skill-point">Programming
+          <p class="skill-details hidden">C, Python, HTML and CSS</p>
+          <ul class="hidden">
+            <li>C programming</li>
+            <li>python</li>
+            <li> HTML and CSS</li>
+          </ul>
+        </li>
+        <li class="skill-point">Soft skills
+           <p class="skill-details hidden">Team playing, communication</p>
+          <ul class="hidden">
+            <li>team playing</li>
+            <li>communication</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- This section contains education background -->
+    <div class="card">
+      <h2>Educational background</h2>
+      <button id="sortBtn">Sort by Year ▲</button>
+      <table border="1" id="edTable">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>School/institution</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>bachelor</td>
+            <td>UDSM</td>
+            <td>2025-present</td>
+          </tr>
+          <tr>
+            <td>A`level</td>
+            <td>Kibaha Sec</td>
+            <td>2023-2025</td>
+          </tr>
+          <tr>
+            <td>O`level</td>
+            <td>Mzumbe Sec</td>
+            <td>2019-2022</td>
+          </tr>
+          <tr>
+            <td>primary</td>
+            <td>Kilangala</td>
+            <td>2012-2018</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+    <!-- This section contains hobbies and interests -->
+    
+      <h2>Hobbies and Interests</h2>
+      <ul>
+        <li><em>Physical exercise</em> -for enhancing mental well-being and overall body fitness </li>
+
+        <li> <em> Watching football</em> - taking it as a part of refreshment</li>
+      </ul>
+      <ul id="hobbiesContent" class="hidden">
+        <li><em> Exploring social media for technological updates</em> -seems to be a good way to learn about the
+          contemporary situations of the world </li>
+
+        <li> <em>Handicraft</em> -allows flexibility and creativity</li>
+
+      </ul>
+     <button id="readMoreBtn">Read More</button><!--read more-->
+     </div>
+
+    <!-- This section contains profile image -->
+    <div class="card center">
+      <h2>Profile image </h2>
+      <img src="Nurdini.png" alt="Profile Image" id="profileImg" width="400" height="450">
+    </div>
+
+    <!-- This section contains favorite links -->
+    <div class="card center">
+      <h2> My Favorite links</h2>
+      <ul>
+        <li><a class="btn" href="https://github.com/">My Github account</a></li>
+        <li><a class="btn" href="https://www.instagram.com/">My Instagram account</a></li>
+      </ul>
+    </div>
+
+    <!-- This section contains back to home link -->
+    <div class="center">
+      <a class="btn" href="index.html">Back to Home</a>
+    </div>
+  </div><!--container ends-->
+
+  <!-- scroll up button -->
+        <button id="scrollTopBtn">↑</button>
+
+        <!--lightbox overlay -->
+        <div id="lightbox" class="lightbox">
+            <span id="lightboxClose" class="lightbox-close">✕</span>
+            <img id="lightboxImg" src="" alt="Enlarged Image">
+        </div>
+
+    <script src="profile-nurdini (1).js" defer></script>
+</body>
+
+</html>
