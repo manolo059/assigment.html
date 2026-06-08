@@ -1,5 +1,10 @@
 // ── DIGITAL CLOCK ────────────────────────────────────────────────────────────
 
+/**
+ * updateClock()
+ * Reads the current time and displays it inside the element with id "clock".
+ * Called once on page load and then repeatedly every second via setInterval.
+ */
 function updateClock() {
     // Create a new Date object that captures the current date and time.
     const now = new Date();
@@ -12,8 +17,6 @@ function updateClock() {
     document.getElementById("clock").textContent = timeString;
 }
 
-// Schedule updateClock() to run every 1000 milliseconds (1 second),
-// so the clock display stays up to date continuously.
 setInterval(updateClock, 1000);
 
 // Also call updateClock() immediately so the clock appears right away
@@ -23,16 +26,15 @@ updateClock();
 
 // ── TYPEWRITER EFFECT ────────────────────────────────────────────────────────
 
-// The full message to be typed out character by character on the page.
-const message = "Welcome";
+const message = "Welcome!.";
 
 // The maximum number of characters to display from the message.
 // This acts as a safety cap in case the message is longer than intended.
 const limit = 120;
 
 // The target DOM element where the message will be typed into.
-// It should have id="welcome" in the HTML.
-const target = document.getElementById("welcome");
+// It should have id="typewriter" in the HTML.
+const target = document.getElementById("typewriter");
 
 // A counter that tracks which character position we are currently at
 // as the typewriter effect progresses through the message string.
@@ -57,7 +59,7 @@ function typeWriter() {
 
         // Schedule typeWriter() to run again after 100 milliseconds.
         // This delay controls the typing speed — lower = faster, higher = slower.
-        setTimeout(typeWriter, 100000); // typing speed: 100ms per character
+        setTimeout(typeWriter, 1000); // typing speed: 100ms per character
     }
     // When the condition is false, the function stops calling itself
     // and the typewriter effect ends naturally.
