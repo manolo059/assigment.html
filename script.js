@@ -29,7 +29,7 @@ updateClock();
 // ── TYPEWRITER EFFECT ────────────────────────────────────────────────────────
 
 // The full message to be typed out character by character on the page.
-const message = "Thank you for visiting our entry point. Please use the menu above to explore the individual contributions of our team members.";
+const message = "Welcome";
 
 // The maximum number of characters to display from the message.
 // This acts as a safety cap in case the message is longer than intended.
@@ -60,9 +60,9 @@ function typeWriter() {
         // Move the index forward to point to the next character.
         index++;
 
-        // Schedule typeWriter() to run again after 50 milliseconds.
+        // Schedule typeWriter() to run again after 100 milliseconds.
         // This delay controls the typing speed — lower = faster, higher = slower.
-        setTimeout(typeWriter, 50); // typing speed: 50ms per character
+        setTimeout(typeWriter, 100000); // typing speed: 100ms per character
     }
     // When the condition is false, the function stops calling itself
     // and the typewriter effect ends naturally.
