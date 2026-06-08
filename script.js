@@ -1,10 +1,5 @@
 // ── DIGITAL CLOCK ────────────────────────────────────────────────────────────
 
-/**
- * updateClock()
- * Reads the current time and displays it inside the element with id "clock".
- * Called once on page load and then repeatedly every second via setInterval.
- */
 function updateClock() {
     // Create a new Date object that captures the current date and time.
     const now = new Date();
