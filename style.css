@@ -85,7 +85,7 @@ body {
   border-radius: 25px;
 }
 
-/* 3. MAIN WORKSPACE & PANEL CONSTRUCTS */
+/* MAIN WORKSPACE & PANEL CONSTRUCTS */
 .main-content {
   display: flex;
   flex-direction: column;
@@ -137,7 +137,7 @@ body {
 body.dark-theme .name { background-color: #334155; color: #f8fafc; }
 .name:hover { color: rgb(97, 74, 15); background-color: #cacdcf; }
 
-/* 4. UI SUB-SECTION COMPONENTS (SKILLS, EDUCATION, HOBBIES) */
+/* SECTION COMPONENTS (SKILLS, EDUCATION, HOBBIES) */
 /* Vertical Skills Stack */
 .skills-vertical-stack { display: flex; flex-direction: column; gap: 1.25rem; }
 .skill-category-box {
@@ -183,7 +183,7 @@ body.dark-theme .education-table tr:hover { background-color: #334155; }
 .toggle-hobby-btn { background: var(--accent-blue); color: white; border: none; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; cursor: pointer; margin-left: 10px; font-weight: 500; }
 .sublist { list-style: disc; margin-top: 10px; padding-left: 25px; display: flex; flex-direction: column; gap: 6px; }
 
-/* 5. GALLERY, LINKS, UTILITIES & OVERLAYS */
+/* GALLERY, LINKS, UTILITIES & OVERLAYS */
 /* Image Grid System & Popups */
 .image-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
 .image-section { background: var(--main-bg); padding: 10px; text-align: center; border: 1px solid var(--border-color); border-radius: 15px; }

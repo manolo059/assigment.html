@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Show/hide toggle using classList or basic styling fallback
                 if (list.style.display === "none") {
                     list.style.display = "block";
-                    card.classList.add("active-skill");
+                    card.classList.add("active-skill");P
                 } else {
                     list.style.display = "none";
                     card.classList.remove("active-skill");
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 // Visual toggle if it's a card without a list (e.g. Continuous Learning)
                 card.style.backgroundColor = card.style.backgroundColor === "rgba(145, 70, 82, 0.2)" 
-                    ? "rgba(255, 255, 255, 0.4)" 
+                    ? "rgba(53, 26, 26, 0.4)" 
                     : "rgba(145, 70, 82, 0.2)";
             }
         });

@@ -45,10 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 return ascendingTrackOrder ? (embeddedValueA - embeddedValueB) : (embeddedValueB - embeddedValueA);
             });
 
+            // Re-append rows in new order
             rowsArray.forEach(row => tableBody.appendChild(row));
 
-            ascendingTrackOrder = !ascendingTrackOrder;
+            ascendingTrackOrder = !ascendingTrackOrder; // Invert Boolean True = False
 
+            // Update sort button to reflect current sorting order
             sortBtn.innerHTML = ascendingTrackOrder ? '⬇️' : '⬆️' ;
         });
     }
