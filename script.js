@@ -36,7 +36,7 @@ const limit = 120;
 // It should have id="typewriter" in the HTML.
 const target = document.getElementById("typewriter");
 
-// A counter that tracks which character position we are currently at
+// A counter that tracks which c    haracter position we are currently at
 // as the typewriter effect progresses through the message string.
 let index = 0;
 
